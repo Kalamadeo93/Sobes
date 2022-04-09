@@ -9,12 +9,10 @@ package Calculator;
     y - 2 = x + 1
  */
 
-import java.math.BigInteger;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Main main = new Main();
         int[] arr = {-7,-5,-2,0,1,5,9};
         int[] arr1 = {-4,-1,2,4,8};
         System.out.println(Arrays.toString(mergeArrays(arr, arr1)));
