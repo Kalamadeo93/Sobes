@@ -25,6 +25,29 @@ public class Robot {
     }
 
     public static void moveRobot(Robot robot, int toX, int toY) {
+        Direction startDirection = robot.getDirection();
+        int startX = robot.getX();
+        int startY = robot.getY();
+        int wayToX = Math.abs(startX - toX);
+        int wayToY = Math.abs(startY - toY);
+        if (startX <= toX && startY <= toY){
+            while (startDirection != Direction.UP){
+                robot.turnRight();
+            }
+        } else if (startX >= toX && startY >= toY){
+            while (startDirection != Direction.DOWN){
+                robot.turnRight();
+            }
+        } else if (startX >= toX && startY <= toY) {
+            while (startDirection != Direction.UP){
+                robot.turnRight();
+            }
+        } else if (startX <= toX && startY >= toY) {
+            while (startDirection != Direction.DOWN){
+                robot.turnRight();
+            }
+        }
+
     }
 
     public enum Direction {
